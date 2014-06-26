@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>smallnest's slide</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic">
+    <link rel="stylesheet" href="css/black.css" media="screen">
+	<link rel="stylesheet" href="css/font-awesome-4.1.0/css/font-awesome.min.css" media="screen">
+	<link rel="stylesheet" href="css/buttons.css" media="screen">
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse
+# <i class="fa fa-file-powerpoint-o"></i> 我的Slide模版 
+
+```
+      .---.       .-----------
+     /     \  __  /    ------
+    / /     \(  )/    -----
+   //////   ' \/ `   ---
+  //// / // :    : ---
+ // /   /  /`    '--
+//          //..\\
+       ====UU====UU====
+           '//||\\`
+             ''``
+```     
+## 基于[remark](http://remarkjs.com)和其它的开源项目 
+```
+smallnest
+2014.7.1
+```
+---
+class: inverse
+## 标题示例 (h2)
+### 
+
+### 标题 (h3)
+#### 标题 (h4)
+##### 标题 (h5)
+###### 标题 (h6)
+标题 (h1)
+=======
+标题 (h2)
+-------
+
+
+---
+class: inverse
+## 换行
+### 
+
+一个 Markdown 段落是由一个或多个连续的文本行组成，
+它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。  
+比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。
+
+如果你确实想要依赖 Markdown 来插入 <br /> 标签的话，在插入处先按入两个以上的空格然后回车。
+
+([Markdown语法](http://wowubuntu.com/markdown/))
+---
+class: inverse
+## 我喜欢使用命令行的原因
+### 
+
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+ 
+> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+ id sem consectetuer libero luctus adipiscing.
+
+--
+> ## 这是一个标题。
+> 
+> 1.   这是第一行列表项。
+> 2.   这是第二行列表项。
+> 
+> 给出一些例子代码：
+> 
+>     return shell_exec("echo $input | $markdown_script");
+
+---
+class: inverse
+## 列表
+### 无序列表
+
+* 使用星号  
+列表描述
++ 使用加号
+- 使用减号
+
+### 有序列表
+
+1. 列表项  
+列表描述
+8. 列表项
+2. 列表项
+
+---
+class: inverse
+## 代码区块 (缩进)
+### 
+
+
+	% ansible nginx -m command -a 'which nginx'
+
+	% !:gs/nginx/squid
+
+	% ansible squid -m command -a 'which squid'
+
+	% ^nginx^squid^:G # zsh
+
+---
+class: inverse
+## 代码区块 (```)
+### 
+
+```
+% ansible nginx -m command -a 'which nginx'
+
+% !:gs/nginx/squid
+
+% ansible squid -m command -a 'which squid'
+
+% ^nginx^squid^:G # zsh
+```
+---
+class: inverse
+## 横线
+### 
+
+#### 你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。
+
+* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+
+---
+class: inverse
+## 链接
+### 
+
+Markdown 支持两种形式的链接语法： 行内式和参考式两种形式。  
+不管是哪一种，链接文字都是用 [方括号] 来标记。
+
+This is [an example](http://example.com/ "Title") inline link.  
+[This link](http://example.net/) has no title attribute.
+
+---
+class: inverse
+## 参考式的链接
+### 
+
+参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
+
+This is [an example][id] reference-style link.
+
+你也可以选择性地在两个方括号中间加上一个空格：
+
+This is [an example] [id] reference-style link.
+
+接着，在文件的任意处，你可以把这个标记的链接内容定义出来：
+
+[id]: http://example.com/  "Optional Title Here"
+
+---
+class: inverse
+## 强调
+### 
+
+*斜体强调*
+_斜体强调_
+**粗体强调**
+__粗体强调__
+
+---
+class: inverse
+## 代码
+### 
+
+- 缩进  
+	class A {
+	}
+	
+- ```
+  
+```Java
+class A {
+}
+```
+
+- 反引号\`  
+这是代码`class`
+
+---
+class: inverse
+## 图片
+### 
+
+- 行内式
+
+![Google](https://www.google.com/images/srpr/logo11w.png)  
+![Baidu](http://www.baidu.com/img/bdlogo.gif "Baidu")
+
+- 参考式
+
+![Google][google]  
+[google]: https://www.google.com/images/srpr/logo11w.png  "Google"
+
+---
+class: inverse
+## 其它
+### 
+
+- 自动链接
+
+<http://example.com/>
+
+- 反斜杠
+
+	\\   反斜线  
+	\`   反引号  
+	\*   星号  
+	\_   底线  
+	\{}  花括号  
+	\[]  方括号  
+	\()  括弧  
+	\#   井字号  
+	\+   加号  
+	\-   减号  
+	\.   英文句点  
+	\!   惊叹号  
+
+
+---
+class: inverse
+## 图标
+### 
+- Basic Icons  
+<i class="fa fa-camera-retro"></i> fa-camera-retro
+
+- Larger Icons  
+<i class="fa fa-camera-retro fa-lg"></i> fa-lg  
+<i class="fa fa-camera-retro fa-2x"></i> fa-2x  
+<i class="fa fa-camera-retro fa-3x"></i> fa-3x  
+<i class="fa fa-camera-retro fa-4x"></i> fa-4x  
+<i class="fa fa-camera-retro fa-5x"></i> fa-5x  
+
+- Fixed Width Icons  
+<div class="list-group">
+  <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+  <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a>
+  <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Applications</a>
+  <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
+</div>
+
+---
+class: inverse
+## 图标
+### 
+- List Icons  
+<ul class="fa-ul">
+  <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+  <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+  <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+  <li><i class="fa-li fa fa-square"></i>in lists</li>
+</ul>
+
+- Spinning Icons  
+<i class="fa fa-spinner fa-spin"></i>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<i class="fa fa-refresh fa-spin"></i>
+<i class="fa fa-cog fa-spin"></i>
+
+- Rotated & Flipped  
+<i class="fa fa-shield"></i> normal<br>
+<i class="fa fa-shield fa-rotate-90"></i> fa-rotate-90<br>
+<i class="fa fa-shield fa-rotate-180"></i> fa-rotate-180<br>
+<i class="fa fa-shield fa-rotate-270"></i> fa-rotate-270<br>
+<i class="fa fa-shield fa-flip-horizontal"></i> fa-flip-horizontal<br>
+<i class="fa fa-shield fa-flip-vertical"></i> icon-flip-vertical
+
+---
+class: inverse
+## 图标
+### 
+- Stacked Icons  
+<span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+fa-twitter on fa-square-o<br>
+<span class="fa-stack fa-lg">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+</span>
+fa-flag on fa-circle<br>
+<span class="fa-stack fa-lg">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+</span>
+fa-terminal on fa-square<br>
+<span class="fa-stack fa-lg">
+  <i class="fa fa-camera fa-stack-1x"></i>
+  <i class="fa fa-ban fa-stack-2x text-danger"></i>
+</span>
+fa-ban on fa-camera
+
+---
+class: inverse
+## 数学公式
+### 
+
+- LaTeX:  
+$$e^{i\pi} + 1 = 0$$  
+$$\alpha(x) = \sum\limits_{m=0}^\infty \frac{(-1)^m}{m! \, \Gamma(m + \alpha + 1)}{\bigl({\frac{x}{2}}\bigr)}^{2 m + \alpha}$$  
+$$\[\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0
+\end{vmatrix}  \]$$  
+$$\begin{aligned}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} &amp; = 0 \end{aligned}$$
+
+---
+class: inverse
+## 按钮
+### 
+
+	
+<a href="#" class="button big blue">Big Button</a>
+<a href="#" class="button big green">Big Button</a>
+<a href="#" class="button big orange">Big Button</a>
+<a href="#" class="button big gray">Big Button</a>
+    
+<a href="#" class="button blue medium">Medium Button</a>
+<a href="#" class="button green medium">Medium Button</a>
+<a href="#" class="button orange medium">Medium Button</a>
+<a href="#" class="button gray medium">Medium Button</a>
+    
+<a href="#" class="button small blue">Small Button</a>
+<a href="#" class="button small green">Small Button</a>
+<a href="#" class="button small blue rounded">Rounded</a>
+    
+<a href="#" class="button small orange">Small Button</a>
+<a href="#" class="button small gray">Small Button</a>
+        
+<a href="#" class="button small green rounded">Rounded</a>
+    
+
+
+---
+class: inverse
+## 联系方式
+### 
+
+```
+- Website: http://colobu.com
+
+- Weibo: http://weibo.com/colobu
+
+- GitHub: http://github.com/smallnest
+
+```
+---
+class: center, middle, inverse
+## 谢谢大家！
+    </textarea>
+    <script src="js/remark.min.js" type="text/javascript"></script>
+	<script src="js/MathJax/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+        highlightStyle: 'monokai',
+        highlightLanguage: 'remark'
+      });
+    </script>
+	<script type="text/javascript">
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
